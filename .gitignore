@@ -120,7 +120,7 @@ celerybeat.pid
 .venv
 
 env/
-venv/
+venv
 ENV/
 env.bak/
 venv.bak/
@@ -149,3 +149,4 @@ dmypy.json
 
 # profiling data
 .prof
+/venv/
