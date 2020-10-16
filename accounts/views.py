@@ -52,6 +52,10 @@ def register(request):
 
 
 def logout(request):
+    if request.method == "POST":
+        auth.logout(request)
+        messages.success(request, 'You are now logged out')
+        redirect('index')
     return redirect('index')
 
 
