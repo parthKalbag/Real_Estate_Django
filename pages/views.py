@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from listings.models import Listing
 from realtors.models import Realtor
+from listings import choices
 
 
 def index(request):
     listings = Listing.objects.order_by('list_data').filter(is_published=True)[:3]
-    context = {'listings': listings}
+    context = {'listings': listings, 'state_choices': choices.state_choices, 'bedroom_choices': choices.bedroom_choices,
+               'price_choices': choices.price_choices}
     return render(request, 'pages/index.html', context)
 
 
