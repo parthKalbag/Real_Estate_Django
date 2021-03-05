@@ -151,3 +151,6 @@ dmypy.json
 .prof
 /venv/
 .idea/
+
+# Configurations
+config.py
